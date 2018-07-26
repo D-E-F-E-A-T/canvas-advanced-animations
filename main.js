@@ -30,4 +30,12 @@ const update = () => {
   }
 };
 
+document.getElementById("faster").onclick = function(){
+  ball.vx *= 1.1;
+};
+
+document.getElementById("slower").onclick = function(){
+  ball.vx *= 0.9;
+};
+
 setInterval(update, 20);
