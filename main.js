@@ -16,3 +16,12 @@ const ball = {
 };
 
 ball.draw();
+
+const update = () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ball.draw();
+  ball.x += ball.vx;
+  ball.y += ball.vy;
+};
+
+setInterval(update, 20);
