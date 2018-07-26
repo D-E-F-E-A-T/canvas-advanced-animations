@@ -32,6 +32,7 @@ const update = () => {
   if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx *= -1;
   }
+  ball.vy += (gravity - ball.userPull);
 };
 
 document.getElementById("faster").onclick = () => {
@@ -43,6 +44,7 @@ document.getElementById("slower").onclick = () => {
 };
 
 const intervalId = setInterval(update, 20);
+
 
 const hitBottom = () => {
   const rockbottom = canvas.height - ball.radius;
